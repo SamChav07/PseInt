@@ -1,17 +1,16 @@
-SubProceso entradaSist
-	
-	Definir username, password Como Caracter;
+SubProceso accSys
+	Definir enterUsername, enterPassword Como Caracter;
 	definir login Como Entero;
 	
 	Repetir
-		Escribir "Bienvenido a VehicleSift";
+		Escribir "Bienvenido a vehicleSift";
 		Escribir "Escriba su usuario: ";
-		Leer username;
+		Leer enterUsername;
 		
 		Escribir "Escriba su contraseña: ";
-		Leer password;
+		Leer enterPassword;
 		
-		login <- Credenciales(username, password);
+		login <- Credentials (enterUsername, enterPassword);
 		
 		si login = 1 Entonces
 			
@@ -28,22 +27,23 @@ SubProceso entradaSist
 	
 FinSubProceso
 
-SubProceso validez<- Credenciales ( usuario Por Referencia, contrasena Por Referencia)
+SubProceso confirmation<- credentials (username Por Referencia, password Por Referencia)
 	
-	definir validez como entero;
-	validez <- 0;
-	si usuario = "admin" y contrasena = "tmolina" Entonces
+	definir confirmation como entero;
+	confirmation <- 0;
+	si username = "Admin" y password = "Tmolina" Entonces
 		
-		validez <- 1;
+		confirmation <- 1;
 		
 	FinSi
 	
 	
 FinSubProceso
+	
 
 Proceso proyectoFinal
 	
-	entradaSist();
+	accSys();
 	Definir menu Como Entero;
 	Escribir "<<--MENU-->>";
 	Escribir "1. Marca del camión.";
