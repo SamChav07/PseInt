@@ -1,0 +1,92 @@
+SubProceso entradaSist
+	
+	Definir username, password Como Caracter;
+	definir login Como Entero;
+	
+	Repetir
+		Escribir "Bienvenido a VehicleSift";
+		Escribir "Escriba su usuario: ";
+		Leer username;
+		
+		Escribir "Escriba su contraseña: ";
+		Leer password;
+		
+		login <- Credenciales(username, password);
+		
+		si login = 1 Entonces
+			
+			Escribir "Acceso concedido";
+			
+		SiNo
+			
+			Escribir "Acceso denegado...";
+			Escribir "*** Presione cualquier tecla para volver a introucir las credenciales ***";
+			Esperar Tecla;
+			Limpiar Pantalla;
+		FinSi
+	Hasta Que login = 1
+	
+FinSubProceso
+
+SubProceso validez<- Credenciales ( usuario Por Referencia, contrasena Por Referencia)
+	
+	definir validez como entero;
+	validez <- 0;
+	si usuario = "admin" y contrasena = "tmolina" Entonces
+		
+		validez <- 1;
+		
+	FinSi
+	
+	
+FinSubProceso
+
+Proceso proyectoFinal
+	
+	entradaSist();
+	Definir menu Como Entero;
+	Escribir "<<--MENU-->>";
+	Escribir "1. Marca del camión.";
+	Escribir "2. Modelo del camión.";
+	Escribir "3. Año de fabricación.";
+	Escribir "4. Tipo de camión (Refrigerado o sin refrigeración).";
+	Escribir "5. Capacidad de carga (Toneladas).";
+	Escribir "6. Código de camión.";
+	Escribir "7. Placa del camión.";
+	Escribir "8. Conductor del camión (con fecha de asignación al camión).";
+	Escribir "9. Salir...";
+	
+	Escribir "Digite una opcion: ";
+	Leer menu;
+	
+	Segun menu Hacer 
+		1:
+			Escribir "Ingresaste a: ";
+			Escribir "Marca del camión";
+		2:
+			Escribir "Ingresaste a: ";
+			Escribir "Modelo del camión";
+		3:
+			Escribir "Ingresaste a: ";
+			Escribir "Año de fabricación";
+		4:
+			Escribir "Ingresaste a: ";
+			Escribir "Tipo de camión";
+		5:
+			Escribir "Ingresaste a: ";
+			Escribir "Capacidad de carga";
+		6:
+			Escribir "Ingresaste a: ";
+			Escribir "Código de camión";
+		7:
+			Escribir "Ingresaste a: ";
+			Escribir "Placa del camión";
+		8:
+			Escribir "Ingresaste a: ";
+			Escribir "Conductor del camión";
+		De Otro Modo:
+			Escribir "Opcion Invalida. Ingrese una opcion valida...";
+	FinSegun
+	
+	
+FinProceso
