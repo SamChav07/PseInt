@@ -61,27 +61,35 @@ Proceso proyectoFinal
 	
 	Segun menu Hacer 
 		1:
+			Limpiar Pantalla;
 			Escribir "Ingresaste a: ";
 			Escribir "Marca del camión";
 		2:
+			Limpiar Pantalla;
 			Escribir "Ingresaste a: ";
 			Escribir "Modelo del camión";
 		3:
+			Limpiar Pantalla;
 			Escribir "Ingresaste a: ";
 			Escribir "Año de fabricación";
 		4:
+			Limpiar Pantalla;
 			Escribir "Ingresaste a: ";
 			Escribir "Tipo de camión";
 		5:
+			Limpiar Pantalla;
 			Escribir "Ingresaste a: ";
 			Escribir "Capacidad de carga";
 		6:
+			Limpiar Pantalla;
 			Escribir "Ingresaste a: ";
 			Escribir "Código de camión";
 		7:
+			Limpiar Pantalla;
 			Escribir "Ingresaste a: ";
 			Escribir "Placa del camión";
 		8:
+			Limpiar Pantalla;
 			Escribir "Ingresaste a: ";
 			Escribir "Conductor del camión";
 		De Otro Modo:
