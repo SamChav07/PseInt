@@ -1,3 +1,90 @@
+SubProceso searchDriver( truckDriver )
+	Si truckDriver = "activo" Entonces
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Nombre del conductor: Lola la Trailera";
+		Escribir "ID: CDR123456";
+		Escribir "Estado: Activo";
+		Escribir "Vehiculo asignado: FREIGHTLINER, FDL 120 ";
+		Escribir "Codigo del vehiculo: NI012345";
+		Escribir "En viaje: --";
+		Escribir "Trayecto: --";
+		Escribir "Fecha de ingreso: 04 - 01 - 23";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Nombre del conductor: Ana María Hernández Pérez ";
+		Escribir "ID: CDR123457";
+		Escribir "Estado: Activo";
+		Escribir "Vehiculo asignado: FREIGHTLINER ";
+		Escribir "Codigo del vehiculo: NI012346";
+		Escribir "En viaje: --";
+		Escribir "Trayecto: --";
+		Escribir "Fecha de ingreso: 05 - 01 - 23";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Nombre del conductor: Miguel Ángel Pérez Castro  ";
+		Escribir "ID: CDR123460";
+		Escribir "Estado: Activo";
+		Escribir "Vehiculo asignado: FREIGHTLINER ";
+		Escribir "Codigo del vehiculo: NI012349";
+		Escribir "En viaje: --";
+		Escribir "Trayecto: --";
+		Escribir "Fecha de ingreso: 06 - 01 - 23";
+		Escribir " ";
+		Escribir "Pulse cualquier tecla para salir...";
+		Esperar Tecla;
+		
+	FinSi
+	
+	Si truckDriver = "inactivo" Entonces
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Nombre del conductor: Luis Fernando González Ruiz ";
+		Escribir "ID: CDR123458";
+		Escribir "Estado: Inactivo";
+		Escribir "Vehiculo asignado: FREIGHTLINER";
+		Escribir "Codigo del vehiculo: NI012347";
+		Escribir "En viaje: --";
+		Escribir "Trayecto: --";
+		Escribir "Fecha de ingreso: 06 - 01 - 23";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Nombre del conductor: Juan Carlos Rodríguez García ";
+		Escribir "ID: CDR123459";
+		Escribir "Estado: Inactivo";
+		Escribir "Vehiculo asignado: FREIGHTLINER/ CASCADIA";
+		Escribir "Codigo del vehiculo: NI012348";
+		Escribir "En viaje: --";
+		Escribir "Trayecto: --";
+		Escribir "Fecha de ingreso: 07 - 01 - 23";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Nombre del conductor: Carlos Eduardo Díaz Gómez  ";
+		Escribir "ID: CDR123462";
+		Escribir "Estado: Inactivo";
+		Escribir "Vehiculo asignado: WABASH, NR";
+		Escribir "Codigo del vehiculo: NI012372";
+		Escribir "En viaje: --";
+		Escribir "Trayecto: --";
+		Escribir "Fecha de ingreso: 10 - 01 - 23";
+		Escribir " ";
+		Escribir "Pulse cualquier tecla para salir...";
+		Esperar Tecla;
+		
+	FinSi
+	
+FinSubProceso
+
 SubProceso searchTruckplate( truckPlate ) 
 	
 	Si truckPlate = "M 362446" Entonces
@@ -237,6 +324,7 @@ SubProceso searchVehicletype ( vehicleType )
 		Escribir "Código de camión: NI012345";
 		Escribir "Placa del camión: M 362446";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -248,6 +336,7 @@ SubProceso searchVehicletype ( vehicleType )
 		Escribir "Código de camión: NI012346";
 		Escribir "Placa del camión: M 370158";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -259,6 +348,7 @@ SubProceso searchVehicletype ( vehicleType )
 		Escribir "Código de camión: NI012347";
 		Escribir "Placa del camión: M 214446";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -270,6 +360,7 @@ SubProceso searchVehicletype ( vehicleType )
 		Escribir "Código de camión: NI012348";
 		Escribir "Placa del camión: M 366862";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -281,6 +372,7 @@ SubProceso searchVehicletype ( vehicleType )
 		Escribir "Código de camión: NI012349";
 		Escribir "Placa del camión: M 332754";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -321,6 +413,7 @@ SubProceso searchRefr ( refr )
 		Escribir "Código de camión: NI012372";
 		Escribir "Placa del camión: M 359335";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -332,6 +425,7 @@ SubProceso searchRefr ( refr )
 		Escribir "Código de camión: NI012373";
 		Escribir "Placa del camión: M 347773";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -343,6 +437,7 @@ SubProceso searchRefr ( refr )
 		Escribir "Código de camión: NI012374";
 		Escribir "Placa del camión: M 285801";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -354,6 +449,7 @@ SubProceso searchRefr ( refr )
 		Escribir "Código de camión: NI012375";
 		Escribir "Placa del camión: M 368231";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -365,6 +461,7 @@ SubProceso searchRefr ( refr )
 		Escribir "Código de camión: NI012376";
 		Escribir "Placa del camión: M 306304";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -399,6 +496,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Código de camión: NI012346";
 		Escribir "Placa del camión: M 370158";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -410,6 +508,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Código de camión: NI012372";
 		Escribir "Placa del camión: M 359335";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -439,6 +538,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Código de camión: NI012345";
 		Escribir "Placa del camión: M 362446";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -450,6 +550,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Código de camión: NI012349";
 		Escribir "Placa del camión: M 332754";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -479,6 +580,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Código de camión: NI012347";
 		Escribir "Placa del camión: M 214446";
 		Escribir "Estado: En viaje";
+		
 		Escribir  " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -508,6 +610,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Código de camión: NI012367";
 		Escribir "Placa del camión: M 201066";
 		Escribir "Estado: En viaje";
+		
 		Escribir  " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -519,6 +622,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Código de camión: NI012405";
 		Escribir "Placa del camión: M 294642";
 		Escribir "Estado: En viaje";
+		
 		Escribir  " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -553,6 +657,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Código de camión: NI012345";
 		Escribir "Placa del camión: M 362446";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -564,6 +669,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Código de camión: NI012348";
 		Escribir "Placa del camión: M 366862";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -593,6 +699,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Código de camión: NI012405";
 		Escribir "Placa del camión: M 294642";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -604,6 +711,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Código de camión: NI012374";
 		Escribir "Placa del camión: M 285801";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -633,6 +741,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Código de camión: NI012373";
 		Escribir "Placa del camión: M 347773";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -644,6 +753,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Código de camión: NI012375";
 		Escribir "Placa del camión: M 368231";
 		Escribir "Estado: En viaje";
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
@@ -720,7 +830,8 @@ Proceso proyectoFinal
 	Escribir "4. Tipo de vehículo.";
 	Escribir "5. Código de camión.";
 	Escribir "6. Placa del camión.";
-	Escribir "7. Salir...";
+	Escribir "7. Conductores.";
+	Escribir "8. Salir...";
 	
 	Escribir "Digite una opcion: ";
 	Leer menu;
@@ -781,9 +892,17 @@ Proceso proyectoFinal
 			Leer enterTruckplate;
 			
 			searchTruckplate(enterTruckplate);
+		7:
+			Definir enterDriver Como Caracter;
+			Limpiar Pantalla;
+			Escribir "Ingresaste a: ";
+			Escribir "Conductores";
+			Escribir "Ingresaste el estado de los conductores: << activo >> o << inactivo >>";
+			Leer enterDriver;
 			
+			searchDriver(enterDriver);
 		De Otro Modo:
-			Escribir "Opcion Invalida. Ingrese una opcion valida...";
+			Escribir "*** Opcion Invalida. Ingrese una opcion valida ***";
 	FinSegun
 	
 	
