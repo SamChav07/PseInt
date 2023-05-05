@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 SubProceso menu
 	
 	Limpiar Pantalla;
@@ -11,7 +10,8 @@ SubProceso menu
 	Escribir "4. Tipo de vehículo.";
 	Escribir "5. Código de camión.";
 	Escribir "6. Placa del camión.";
-	Escribir "7. Salir...";
+	Escribir "7. Conductor del camión.";
+	Escribir "8. Cerrar sesión.";
 	
 	Escribir "Digite una opcion: ";
 	Leer enterMenu;
@@ -74,15 +74,32 @@ SubProceso menu
 			searchTruckplate(enterTruckplate);
 			
 		7:
+			Definir enterDriver Como Caracter;
+			Limpiar Pantalla;
+			Escribir "Ingresaste a: ";
+			Escribir "Conductores";
+			Escribir "Ingresa el estado de los conductores: << activo >> o << inactivo >>";
+			Leer enterDriver;
 			
-			Escribir "Saliendo de VehicleSift...";
+			searchDriver(enterDriver);
+			
+		8:	
+			Limpiar Pantalla;
+			Escribir " ";
+			Escribir "*** Cerrando Sesion ***";
+			Escribir " ";
+			
+			
 			
 		De Otro Modo:
 			Escribir "Opcion Invalida. Ingrese una opcion valida...";
 	FinSegun
 	
-=======
+	
+FinSubProceso
+
 SubProceso searchDriver( truckDriver )
+	Limpiar Pantalla;
 	Si truckDriver = "activo" Entonces
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
@@ -120,9 +137,9 @@ SubProceso searchDriver( truckDriver )
 		Escribir "Trayecto: --";
 		Escribir "Fecha de ingreso: 06 - 01 - 23";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckDriver = "inactivo" Entonces
@@ -162,16 +179,15 @@ SubProceso searchDriver( truckDriver )
 		Escribir "Trayecto: --";
 		Escribir "Fecha de ingreso: 10 - 01 - 23";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
->>>>>>> 5b4b636d3fbb69e9f8bc55f7f8b9ea87ba8958e8
 	
 FinSubProceso
 
 SubProceso searchTruckplate( truckPlate ) 
-	
+	Limpiar Pantalla;
 	Si truckPlate = "M 362446" Entonces
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
@@ -284,7 +300,7 @@ SubProceso searchTruckplate( truckPlate )
 FinSubProceso
 
 SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
-	
+	Limpiar Pantalla;
 	Si truckCode = "NI012345" Entonces
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
@@ -397,7 +413,7 @@ SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
 FinSubProceso
 
 SubProceso searchVehicletype ( vehicleType )
-	
+	Limpiar Pantalla;
 	Si vehicleType = "Cabezal" Entonces
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
@@ -475,18 +491,12 @@ SubProceso searchVehicletype ( vehicleType )
 		Esperar Tecla;
 		menu();
 	FinSi
-	
-	
-FinSubProceso
-
-
-SubProceso searchRefr ( refr )
-	
-	Si refr = "Refrigerado" Entonces
+	Si vehicleType = "Contenedor" Entonces
+		
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si ";
 		Escribir "Marca del camion: WABASH, NR";
 		Escribir "Año de fabricación: 2000";
@@ -498,7 +508,7 @@ SubProceso searchRefr ( refr )
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY";
 		Escribir "Año de fabricación: 2004";
@@ -510,7 +520,7 @@ SubProceso searchRefr ( refr )
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: GREAT DANE, S/M CERRADO";
 		Escribir "Año de fabricación: 2000";
@@ -522,7 +532,7 @@ SubProceso searchRefr ( refr )
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY,MFGCO";
 		Escribir "Año de fabricación: 2009";
@@ -534,7 +544,7 @@ SubProceso searchRefr ( refr )
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY";
 		Escribir "Año de fabricación: 2009";
@@ -546,7 +556,7 @@ SubProceso searchRefr ( refr )
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY";
 		Escribir "Año de fabricación: 2006";
@@ -558,11 +568,95 @@ SubProceso searchRefr ( refr )
 		Esperar Tecla;
 		menu();
 	FinSi
+
+FinSubProceso
+
+
+SubProceso searchRefr ( refr )
+	Limpiar Pantalla;
+	Si refr = "Refrigerado" Entonces
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Tipo de vehiculo: Contenedor";
+		Escribir "Refrigeración: Si ";
+		Escribir "Marca del camion: WABASH, NR";
+		Escribir "Año de fabricación: 2000";
+		Escribir "Capacidad de carga: 23 toneladas";
+		Escribir "Código de camión: NI012372";
+		Escribir "Placa del camión: M 359335";
+		Escribir "Estado: En viaje";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Tipo de vehiculo: Contenedor";
+		Escribir "Refrigeración: Si";
+		Escribir "Marca del camion: UTILITY";
+		Escribir "Año de fabricación: 2004";
+		Escribir "Capacidad de carga: 23 toneladas";
+		Escribir "Código de camión: NI012373";
+		Escribir "Placa del camión: M 347773";
+		Escribir "Estado: En viaje";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Tipo de vehiculo: Contenedor";
+		Escribir "Refrigeración: Si";
+		Escribir "Marca del camion: GREAT DANE, S/M CERRADO";
+		Escribir "Año de fabricación: 2000";
+		Escribir "Capacidad de carga: 23 toneladas";
+		Escribir "Código de camión: NI012374";
+		Escribir "Placa del camión: M 285801";
+		Escribir "Estado: En viaje";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Tipo de vehiculo: Contenedor";
+		Escribir "Refrigeración: Si";
+		Escribir "Marca del camion: UTILITY,MFGCO";
+		Escribir "Año de fabricación: 2009";
+		Escribir "Capacidad de carga: 23 toneladas";
+		Escribir "Código de camión: NI012375";
+		Escribir "Placa del camión: M 368231";
+		Escribir "Estado: En viaje";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Tipo de vehiculo: Contenedor";
+		Escribir "Refrigeración: Si";
+		Escribir "Marca del camion: UTILITY";
+		Escribir "Año de fabricación: 2009";
+		Escribir "Capacidad de carga: 23 toneladas";
+		Escribir "Código de camión: NI012376";
+		Escribir "Placa del camión: M 306304";
+		Escribir "Estado: En viaje";
+		
+		Escribir " ";
+		Escribir "Mostrando resultados a continuacion: ";
+		Escribir " ";
+		Escribir "Tipo de vehiculo: Contenedor";
+		Escribir "Refrigeración: Si";
+		Escribir "Marca del camion: UTILITY";
+		Escribir "Año de fabricación: 2006";
+		Escribir "Capacidad de carga: 23 toneladas";
+		Escribir "Código de camión: NI012377";
+		Escribir "Placa del camión: M 331351";
+		Escribir "Estado: En viaje";
+		Escribir "Pulse cualquier tecla para volver al menu...";
+		Esperar Tecla;
+		menu();
+	SiNo
+		Escribir "No se encontró ningun resultado";
+	FinSi
 	
 FinSubProceso
 
 SubProceso searchTruckyear ( truckyear Por Referencia)
-	
+	Limpiar Pantalla;
 	Si truckyear = 2000 Entonces
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
@@ -579,7 +673,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si ";
 		Escribir "Marca del camion: WABASH, NR";
 		Escribir "Año de fabricación: 2000";
@@ -591,7 +685,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: GREAT DANE, S/M CERRADO";
 		Escribir "Año de fabricación: 2000";
@@ -663,7 +757,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir  " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY";
 		Escribir "Año de fabricación: 2001";
@@ -705,7 +799,7 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir  " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY";
 		Escribir "Año de fabricación: 2003";
@@ -723,7 +817,7 @@ FinSubProceso
 
 
 SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar por marca del camión, esto es solo un prototipo, por limitaciones de pseint, en el programa final no será de esta manera
-	
+	Limpiar Pantalla;
 	Si truckbrand = "Freightliner" Entonces//Muestra algunos de los posibles resultados si la marca ingresada fuera "Freightliner", se muestra una lista de datos correspondientes a cada vehículo
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
@@ -763,19 +857,14 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir " ";
 		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-<<<<<<< HEAD
 		menu();
-=======
-		
-		
->>>>>>> 5b4b636d3fbb69e9f8bc55f7f8b9ea87ba8958e8
 	FinSi
 	
 	Si truckbrand = "Great Dane" Entonces
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: -- ";
 		Escribir "Marca del camion: GREAT DANE";
 		Escribir "Año de fabricación: 2003";
@@ -787,7 +876,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: GREAT DANE, S/M CERRADO";
 		Escribir "Año de fabricación: 2000";
@@ -799,7 +888,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: GREAT DANE";
 		Escribir "Año de fabricación: 1999";
@@ -817,7 +906,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY";
 		Escribir "Año de fabricación: 2004";
@@ -829,7 +918,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY,MFGCO";
 		Escribir "Año de fabricación: 2009";
@@ -841,7 +930,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir " ";
 		Escribir "Mostrando resultados a continuacion: ";
 		Escribir " ";
-		Escribir "Tipo de vehiculo: Refrigerado";
+		Escribir "Tipo de vehiculo: Contenedor";
 		Escribir "Refrigeración: Si";
 		Escribir "Marca del camion: UTILITY";
 		Escribir "Año de fabricación: 2006";
@@ -899,106 +988,12 @@ SubProceso confirmation<- credentials (username Por Referencia, password Por Ref
 	
 	
 FinSubProceso
-	
+
 
 Proceso proyectoFinal
 	
 	accSys();
 	Limpiar Pantalla;
-<<<<<<< HEAD
 	menu();
-=======
-	Definir menu Como Entero;
-	Escribir "<<--MENU DE BUSQUEDA-->>";
-	Escribir "<<--Seleccione un filtro de busqueda-->>";
-	Escribir "1. Marca del camión.";
-	Escribir "2. Año de fabricación.";
-	Escribir "3. Refrigeración.";
-	Escribir "4. Tipo de vehículo.";
-	Escribir "5. Código de camión.";
-	Escribir "6. Placa del camión.";
-	Escribir "7. Conductores.";
-	Escribir "8. Cerrar Sesion...";
-	
-	Escribir "Digite una opcion: ";
-	Leer menu;
-	
-	Segun menu Hacer 
-		1:
-			Definir enterTruckbrand Como Caracter;;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Marca del camión";
-			Escribir "Ingrese la marca del camion: ";
-			Escribir "<< Freightliner >> o << Great Dane >> o << Utility >>";
-			Leer enterTruckbrand;
-			
-			searchTruckbrand(enterTruckbrand);
-		2:
-			Definir enterTruckyear Como Entero;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Año de fabricación";
-			Escribir "Ingrese el año de fabricación: ";
-			Leer enterTruckyear;
-			
-			searchTruckyear(enterTruckyear);
-		3:
-			Definir enterRefr Como Caracter;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Refrigeración";
-			Escribir "Escribe si es <<Refrigerado>> o <<Seco>>";
-			Leer enterRefr;
-			
-			searchRefr(enterRefr);
-		4:
-			Definir enterVehicletype Como Caracter;;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Tipo de vehículo";
-			Escribir "Escribe si es << Cabezal >> o << Contenedor >>";
-			Leer enterVehicletype;
-			
-			searchVehicletype(enterVehicletype);
-		5:
-			Definir enterTruckcode Como Caracter;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Código de camión";
-			Escribir "Ingrese el código de camión";
-			Leer enterTruckcode;
-			
-			searchTruckcode(enterTruckcode);
-		6:
-			Definir enterTruckplate Como Caracter;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Placa del camión";
-			Escribir "Ingrese la placa del camión";
-			Leer enterTruckplate;
-			
-			searchTruckplate(enterTruckplate);
-		7:
-			Definir enterDriver Como Caracter;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Conductores";
-			Escribir "Ingresaste el estado de los conductores: << activo >> o << inactivo >>";
-			Leer enterDriver;
-			
-			searchDriver(enterDriver);
-		8:
-			Escribir " ";
-			Escribir "*** Cerrando Sesion ***";
-			Escribir " ";
-			accSys();
-			Limpiar Pantalla;
-			
-		De Otro Modo:
-			Escribir "*** Opcion Invalida. Ingrese una opcion valida ***";
-	FinSegun
->>>>>>> 5b4b636d3fbb69e9f8bc55f7f8b9ea87ba8958e8
-	
 	
 FinProceso
