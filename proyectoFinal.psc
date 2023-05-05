@@ -1,3 +1,46 @@
+SubProceso notFinishedActions
+	
+	Escribir "Esta función no está disponible por limitaciones de PSeint, será implementada en el programa final de c++";
+	Esperar Tecla;
+	actionSelect();
+	
+FinSubProceso
+
+SubProceso actionSelect 
+	
+	Limpiar Pantalla;
+	Definir action Como Entero;
+	Escribir "<<--MENU DE ACCIONES-->>";
+	Escribir "<<--Seleccione la accion que desea realizar-->>";
+	Escribir "1. Buscar.";
+	Escribir "2. Añadir datos.";
+	Escribir "3. Modificar datos.";
+	Escribir "4. Eliminar datos.";
+	Leer action;
+	
+	Segun action Hacer 
+		1:
+			Limpiar Pantalla;
+			menu();
+			
+		2:
+			Limpiar Pantalla;
+			notFinishedActions();
+			
+		3:
+			Limpiar Pantalla;
+			notFinishedActions();
+		4:
+			Limpiar Pantalla;
+			notFinishedActions();
+			
+		De Otro Modo:
+			Escribir "Opcion Invalida. Ingrese una opcion valida...";
+			
+	FinSegun
+	
+FinSubProceso
+
 SubProceso menu
 	
 	Limpiar Pantalla;
@@ -140,49 +183,61 @@ SubProceso searchDriver( truckDriver )
 		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
 		menu();
+	SiNo
+		
+		Si truckDriver = "inactivo" Entonces
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Nombre del conductor: Luis Fernando González Ruiz ";
+			Escribir "ID: CDR123458";
+			Escribir "Estado: Inactivo";
+			Escribir "Vehiculo asignado: FREIGHTLINER";
+			Escribir "Codigo del vehiculo: NI012347";
+			Escribir "En viaje: --";
+			Escribir "Trayecto: --";
+			Escribir "Fecha de ingreso: 06 - 01 - 23";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Nombre del conductor: Juan Carlos Rodríguez García ";
+			Escribir "ID: CDR123459";
+			Escribir "Estado: Inactivo";
+			Escribir "Vehiculo asignado: FREIGHTLINER/ CASCADIA";
+			Escribir "Codigo del vehiculo: NI012348";
+			Escribir "En viaje: --";
+			Escribir "Trayecto: --";
+			Escribir "Fecha de ingreso: 07 - 01 - 23";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Nombre del conductor: Carlos Eduardo Díaz Gómez  ";
+			Escribir "ID: CDR123462";
+			Escribir "Estado: Inactivo";
+			Escribir "Vehiculo asignado: WABASH, NR";
+			Escribir "Codigo del vehiculo: NI012372";
+			Escribir "En viaje: --";
+			Escribir "Trayecto: --";
+			Escribir "Fecha de ingreso: 10 - 01 - 23";
+			Escribir " ";
+			Escribir "Pulse cualquier tecla para volver al menu...";
+			Esperar Tecla;
+			menu();
+		SiNo
+			
+			Escribir "No se encontró ningun resultado...";
+			Escribir " ";
+			Escribir "Pulse cualquier tecla para volver al menu...";
+			Esperar Tecla;
+			menu();
+			
+			
+		FinSi
+		
 	FinSi
 	
-	Si truckDriver = "inactivo" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Nombre del conductor: Luis Fernando González Ruiz ";
-		Escribir "ID: CDR123458";
-		Escribir "Estado: Inactivo";
-		Escribir "Vehiculo asignado: FREIGHTLINER";
-		Escribir "Codigo del vehiculo: NI012347";
-		Escribir "En viaje: --";
-		Escribir "Trayecto: --";
-		Escribir "Fecha de ingreso: 06 - 01 - 23";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Nombre del conductor: Juan Carlos Rodríguez García ";
-		Escribir "ID: CDR123459";
-		Escribir "Estado: Inactivo";
-		Escribir "Vehiculo asignado: FREIGHTLINER/ CASCADIA";
-		Escribir "Codigo del vehiculo: NI012348";
-		Escribir "En viaje: --";
-		Escribir "Trayecto: --";
-		Escribir "Fecha de ingreso: 07 - 01 - 23";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Nombre del conductor: Carlos Eduardo Díaz Gómez  ";
-		Escribir "ID: CDR123462";
-		Escribir "Estado: Inactivo";
-		Escribir "Vehiculo asignado: WABASH, NR";
-		Escribir "Codigo del vehiculo: NI012372";
-		Escribir "En viaje: --";
-		Escribir "Trayecto: --";
-		Escribir "Fecha de ingreso: 10 - 01 - 23";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
 	
 FinSubProceso
 
@@ -204,98 +259,138 @@ SubProceso searchTruckplate( truckPlate )
 		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
 		menu();
+		
+	SiNo
+		
+		Si truckPlate = "M 370158" Entonces
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Cabezal";
+			Escribir "Refrigeración: -- ";
+			Escribir "Marca del camion: FREIGHTLINER";
+			Escribir "Año de fabricación: 2000";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012346";
+			Escribir "Placa del camión: M 370158";
+			Escribir "Estado: En viaje";
+			Escribir " ";
+			Escribir "Pulse cualquier tecla para volver al menu...";
+			Esperar Tecla;
+			menu();
+		SiNo
+			
+			Si truckPlate = "M 214446" Entonces
+				Escribir " ";
+				Escribir "Mostrando resultados a continuacion: ";
+				Escribir " ";
+				Escribir "Tipo de vehiculo: Cabezal";
+				Escribir "Refrigeración: -- ";
+				Escribir "Marca del camion: FREIGHTLINER";
+				Escribir "Año de fabricación: 2002";
+				Escribir "Capacidad de carga: 23 toneladas";
+				Escribir "Código de camión: NI012347";
+				Escribir "Placa del camión: M 214446";
+				Escribir "Estado: En viaje";
+				Escribir " ";
+				Escribir "Pulse cualquier tecla para volver al menu...";
+				Esperar Tecla;
+				menu();
+			SiNo
+				
+				Si truckPlate = "M 366862" Entonces
+					Escribir " ";
+					Escribir "Mostrando resultados a continuacion: ";
+					Escribir " ";
+					Escribir "Tipo de vehiculo: Cabezal";
+					Escribir "Refrigeración: -- ";
+					Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
+					Escribir "Año de fabricación: 2011";
+					Escribir "Capacidad de carga: 23 toneladas";
+					Escribir "Código de camión: NI012348";
+					Escribir "Placa del camión: M 366862";
+					Escribir "Estado: En viaje";
+					Escribir " ";
+					Escribir "Pulse cualquier tecla para volver al menu...";
+					Esperar Tecla;
+					menu();
+					
+				SiNo
+					
+					Si truckPlate = "M 366862" Entonces
+						Escribir " ";
+						Escribir "Mostrando resultados a continuacion: ";
+						Escribir " ";
+						Escribir "Tipo de vehiculo: Cabezal";
+						Escribir "Refrigeración: -- ";
+						Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
+						Escribir "Año de fabricación: 2011";
+						Escribir "Capacidad de carga: 23 toneladas";
+						Escribir "Código de camión: NI012348";
+						Escribir "Placa del camión: M 366862";
+						Escribir "Estado: En viaje";
+						Escribir " ";
+						Escribir "Pulse cualquier tecla para volver al menu...";
+						Esperar Tecla;
+						menu();
+					SiNo
+						
+						Si truckPlate = "M 332754" Entonces
+							Escribir " ";
+							Escribir "Mostrando resultados a continuacion: ";
+							Escribir " ";
+							Escribir "Tipo de vehiculo: Cabezal";
+							Escribir "Refrigeración: -- ";
+							Escribir "Marca del camion: FREIGHTLINER";
+							Escribir "Año de fabricación: 2001";
+							Escribir "Capacidad de carga: 23 toneladas";
+							Escribir "Código de camión: NI012349";
+							Escribir "Placa del camión: M 332754";
+							Escribir "Estado: En viaje";
+							Escribir " ";
+							Escribir "Pulse cualquier tecla para volver al menu...";
+							Esperar Tecla;
+							menu();
+						SiNo
+							
+							Si truckPlate = "M 349230" Entonces
+								Escribir " ";
+								Escribir "Mostrando resultados a continuacion: ";
+								Escribir " ";
+								Escribir "Tipo de vehiculo: Cabezal";
+								Escribir "Refrigeración: -- ";
+								Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
+								Escribir "Año de fabricación: 2012";
+								Escribir "Capacidad de carga: 23 toneladas";
+								Escribir "Código de camión: NI012350";
+								Escribir "Placa del camión: M 349230";
+								Escribir "Estado: En viaje";
+								Escribir " ";
+								Escribir "Pulse cualquier tecla para volver al menu...";
+								Esperar Tecla;
+								menu();
+							SiNo
+								
+								Escribir "No se encontró ningun resultado...";
+								Escribir " ";
+								Escribir "Pulse cualquier tecla para volver al menu...";
+								Esperar Tecla;
+								menu();
+								
+							FinSi
+							
+						FinSi
+						
+					FinSi
+					
+				FinSi
+				
+			FinSi
+			
+		FinSi
+		
 	FinSi
-	
-	Si truckPlate = "M 370158" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2000";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012346";
-		Escribir "Placa del camión: M 370158";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckPlate = "M 214446" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2002";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012347";
-		Escribir "Placa del camión: M 214446";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckPlate = "M 366862" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
-		Escribir "Año de fabricación: 2011";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012348";
-		Escribir "Placa del camión: M 366862";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckPlate = "M 332754" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2001";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012349";
-		Escribir "Placa del camión: M 332754";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckPlate = "M 349230" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
-		Escribir "Año de fabricación: 2012";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012350";
-		Escribir "Placa del camión: M 349230";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
+
 	
 FinSubProceso
 
@@ -317,98 +412,115 @@ SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
 		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
 		menu();
-	FinSi
+	SiNo
+		
+		Si truckCode = "NI012346" Entonces
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Cabezal";
+			Escribir "Refrigeración: -- ";
+			Escribir "Marca del camion: FREIGHTLINER";
+			Escribir "Año de fabricación: 2000";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012346";
+			Escribir "Placa del camión: M 370158";
+			Escribir "Estado: En viaje";
+			Escribir " ";
+			Escribir "Pulse cualquier tecla para volver al menu...";
+			Esperar Tecla;
+			menu();
+		SiNo
+			
+			Si truckCode = "NI012347" Entonces
+				Escribir " ";
+				Escribir "Mostrando resultados a continuacion: ";
+				Escribir " ";
+				Escribir "Tipo de vehiculo: Cabezal";
+				Escribir "Refrigeración: -- ";
+				Escribir "Marca del camion: FREIGHTLINER";
+				Escribir "Año de fabricación: 2002";
+				Escribir "Capacidad de carga: 23 toneladas";
+				Escribir "Código de camión: NI012347";
+				Escribir "Placa del camión: M 214446";
+				Escribir "Estado: En viaje";
+				Escribir " ";
+				Escribir "Pulse cualquier tecla para volver al menu...";
+				Esperar Tecla;
+				menu();
+			SiNo
+				
+				Si truckCode = "NI012348" Entonces
+					Escribir " ";
+					Escribir "Mostrando resultados a continuacion: ";
+					Escribir " ";
+					Escribir "Tipo de vehiculo: Cabezal";
+					Escribir "Refrigeración: -- ";
+					Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
+					Escribir "Año de fabricación: 2011";
+					Escribir "Capacidad de carga: 23 toneladas";
+					Escribir "Código de camión: NI012348";
+					Escribir "Placa del camión: M 366862";
+					Escribir "Estado: En viaje";
+					Escribir " ";
+					Escribir "Pulse cualquier tecla para volver al menu...";
+					Esperar Tecla;
+					menu();
+				SiNo
+					
+					Si truckCode = "NI012349" Entonces
+						Escribir " ";
+						Escribir "Mostrando resultados a continuacion: ";
+						Escribir " ";
+						Escribir "Tipo de vehiculo: Cabezal";
+						Escribir "Refrigeración: -- ";
+						Escribir "Marca del camion: FREIGHTLINER";
+						Escribir "Año de fabricación: 2001";
+						Escribir "Capacidad de carga: 23 toneladas";
+						Escribir "Código de camión: NI012349";
+						Escribir "Placa del camión: M 332754";
+						Escribir "Estado: En viaje";
+						Escribir " ";
+						Escribir "Pulse cualquier tecla para volver al menu...";
+						Esperar Tecla;
+						menu();
+					SiNo
+						
+						Si truckCode = "NI012350" Entonces
+							Escribir " ";
+							Escribir "Mostrando resultados a continuacion: ";
+							Escribir " ";
+							Escribir "Tipo de vehiculo: Cabezal";
+							Escribir "Refrigeración: -- ";
+							Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
+							Escribir "Año de fabricación: 2012";
+							Escribir "Capacidad de carga: 23 toneladas";
+							Escribir "Código de camión: NI012350";
+							Escribir "Placa del camión: M 349230";
+							Escribir "Estado: En viaje";
+							Escribir " ";
+							Escribir "Pulse cualquier tecla para volver al menu...";
+							Esperar Tecla;
+							menu();
+						SiNo
+							
+							Escribir "No se encontró ningun resultado...";
+							Escribir " ";
+							Escribir "Pulse cualquier tecla para volver al menu...";
+							Esperar Tecla;
+							menu();
+							
+						FinSi
+						
+					FinSi
+					
+				FinSi
+				
+			FinSi
+			
+		FinSi
 	
-	Si truckCode = "NI012346" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2000";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012346";
-		Escribir "Placa del camión: M 370158";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
 	FinSi
-	
-	Si truckCode = "NI012347" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2002";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012347";
-		Escribir "Placa del camión: M 214446";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckCode = "NI012348" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
-		Escribir "Año de fabricación: 2011";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012348";
-		Escribir "Placa del camión: M 366862";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckCode = "NI012349" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2001";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012349";
-		Escribir "Placa del camión: M 332754";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckCode = "NI012350" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER/ CASCADIA";
-		Escribir "Año de fabricación: 2012";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012350";
-		Escribir "Placa del camión: M 349230";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
 	
 FinSubProceso
 
@@ -490,85 +602,96 @@ SubProceso searchVehicletype ( vehicleType )
 		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
 		menu();
+	SiNo
+		
+		Si vehicleType = "Contenedor" Entonces
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: Si ";
+			Escribir "Marca del camion: WABASH, NR";
+			Escribir "Año de fabricación: 2000";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012372";
+			Escribir "Placa del camión: M 359335";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: Si";
+			Escribir "Marca del camion: UTILITY";
+			Escribir "Año de fabricación: 2004";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012373";
+			Escribir "Placa del camión: M 347773";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: Si";
+			Escribir "Marca del camion: GREAT DANE, S/M CERRADO";
+			Escribir "Año de fabricación: 2000";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012374";
+			Escribir "Placa del camión: M 285801";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: Si";
+			Escribir "Marca del camion: UTILITY,MFGCO";
+			Escribir "Año de fabricación: 2009";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012375";
+			Escribir "Placa del camión: M 368231";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: Si";
+			Escribir "Marca del camion: UTILITY";
+			Escribir "Año de fabricación: 2009";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012376";
+			Escribir "Placa del camión: M 306304";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: Si";
+			Escribir "Marca del camion: UTILITY";
+			Escribir "Año de fabricación: 2006";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012377";
+			Escribir "Placa del camión: M 331351";
+			Escribir "Estado: En viaje";
+			Escribir "Pulse cualquier tecla para volver al menu...";
+			Esperar Tecla;
+			menu();
+		SiNo
+			
+			Escribir "No se encontró ningun resultado...";
+			Escribir " ";
+			Escribir "Pulse cualquier tecla para volver al menu...";
+			Esperar Tecla;
+			menu();
+			
+		FinSi
+		
 	FinSi
-	Si vehicleType = "Contenedor" Entonces
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si ";
-		Escribir "Marca del camion: WABASH, NR";
-		Escribir "Año de fabricación: 2000";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012372";
-		Escribir "Placa del camión: M 359335";
-		Escribir "Estado: En viaje";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY";
-		Escribir "Año de fabricación: 2004";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012373";
-		Escribir "Placa del camión: M 347773";
-		Escribir "Estado: En viaje";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: GREAT DANE, S/M CERRADO";
-		Escribir "Año de fabricación: 2000";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012374";
-		Escribir "Placa del camión: M 285801";
-		Escribir "Estado: En viaje";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY,MFGCO";
-		Escribir "Año de fabricación: 2009";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012375";
-		Escribir "Placa del camión: M 368231";
-		Escribir "Estado: En viaje";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY";
-		Escribir "Año de fabricación: 2009";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012376";
-		Escribir "Placa del camión: M 306304";
-		Escribir "Estado: En viaje";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY";
-		Escribir "Año de fabricación: 2006";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012377";
-		Escribir "Placa del camión: M 331351";
-		Escribir "Estado: En viaje";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-
+	
 FinSubProceso
 
 
@@ -650,7 +773,11 @@ SubProceso searchRefr ( refr )
 		Esperar Tecla;
 		menu();
 	SiNo
-		Escribir "No se encontró ningun resultado";
+		Escribir "No se encontró ningun resultado...";
+		Escribir " ";
+		Escribir "Pulse cualquier tecla para volver al menu...";
+		Esperar Tecla;
+		menu();
 	FinSi
 	
 FinSubProceso
@@ -697,120 +824,134 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
 		menu();
-	FinSi
-	
-	Si truckyear = 2001 Entonces//Muestra algunos de los posibles resultados si el año de fabricación fuera 2001, se muestra una lista de datos correspondientes a cada vehículo
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER, FDL 120";
-		Escribir "Año de fabricación: 2001";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012345";
-		Escribir "Placa del camión: M 362446";
-		Escribir "Estado: En viaje";
+	SiNo
 		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2001";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012349";
-		Escribir "Placa del camión: M 332754";
-		Escribir "Estado: En viaje";
+		Si truckyear = 2001 Entonces//Muestra algunos de los posibles resultados si el año de fabricación fuera 2001, se muestra una lista de datos correspondientes a cada vehículo
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Cabezal";
+			Escribir "Refrigeración: -- ";
+			Escribir "Marca del camion: FREIGHTLINER, FDL 120";
+			Escribir "Año de fabricación: 2001";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012345";
+			Escribir "Placa del camión: M 362446";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Cabezal";
+			Escribir "Refrigeración: -- ";
+			Escribir "Marca del camion: FREIGHTLINER";
+			Escribir "Año de fabricación: 2001";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012349";
+			Escribir "Placa del camión: M 332754";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Cabezal";
+			Escribir "Refrigeración: -- ";
+			Escribir "Marca del camion: FREIGHTLINER";
+			Escribir "Año de fabricación: 2001";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012352";
+			Escribir "Placa del camión: M 267213";
+			Escribir "Estado: En viaje";
+			Escribir " ";
+			Escribir "Pulse cualquier tecla para volver al menu...";
+			Esperar Tecla;
+			menu();
+		SiNo
+			
+			Si truckyear = 2002 Entonces
+				Escribir " ";
+				Escribir "Mostrando resultados a continuacion: ";
+				Escribir " ";
+				Escribir "Tipo de vehiculo: Cabezal";
+				Escribir "Refrigeración: -- ";
+				Escribir "Marca del camion: FREIGHTLINER";
+				Escribir "Año de fabricación: 2002";
+				Escribir "Capacidad de carga: 23 toneladas";
+				Escribir "Código de camión: NI012347";
+				Escribir "Placa del camión: M 214446";
+				Escribir "Estado: En viaje";
+				
+				Escribir  " ";
+				Escribir "Mostrando resultados a continuacion: ";
+				Escribir " ";
+				Escribir "Tipo de vehiculo: Contenedor";
+				Escribir "Refrigeración: Si";
+				Escribir "Marca del camion: UTILITY";
+				Escribir "Año de fabricación: 2001";
+				Escribir "Capacidad de carga: 23 toneladas";
+				Escribir "Código de camión: NI012399";
+				Escribir "Placa del camión: M 341725";
+				Escribir "Estado: En viaje";
+				Escribir " ";
+				Escribir "Pulse cualquier tecla para volver al menu...";
+				Esperar Tecla;
+				menu();
+			SiNo
+				
+				Si truckyear = 2003 Entonces
+					Escribir  " ";
+					Escribir "Mostrando resultados a continuacion: ";
+					Escribir " ";
+					Escribir "Tipo de vehiculo: Cabezal";
+					Escribir "Refrigeración: -- ";
+					Escribir "Marca del camion: FREIGHTLINER";
+					Escribir "Año de fabricación: 2003";
+					Escribir "Capacidad de carga: 23 toneladas";
+					Escribir "Código de camión: NI012367";
+					Escribir "Placa del camión: M 201066";
+					Escribir "Estado: En viaje";
+					
+					Escribir  " ";
+					Escribir "Mostrando resultados a continuacion: ";
+					Escribir " ";
+					Escribir "Tipo de vehiculo: Cabezal";
+					Escribir "Refrigeración: -- ";
+					Escribir "Marca del camion: GREAT DANE";
+					Escribir "Año de fabricación: 2003";
+					Escribir "Capacidad de carga: 23 toneladas";
+					Escribir "Código de camión: NI012405";
+					Escribir "Placa del camión: M 294642";
+					Escribir "Estado: En viaje";
+					
+					Escribir  " ";
+					Escribir "Mostrando resultados a continuacion: ";
+					Escribir " ";
+					Escribir "Tipo de vehiculo: Contenedor";
+					Escribir "Refrigeración: Si";
+					Escribir "Marca del camion: UTILITY";
+					Escribir "Año de fabricación: 2003";
+					Escribir "Capacidad de carga: 23 toneladas";
+					Escribir "Código de camión: NI012393";
+					Escribir "Placa del camión: M 336521";
+					Escribir "Estado: En viaje";
+					Escribir " ";
+					Escribir "Pulse cualquier tecla para volver al menu...";
+					Esperar Tecla;
+					menu();
+				SiNo
+					
+					Escribir "No se encontró ningun resultado...";
+					Escribir " ";
+					Escribir "Pulse cualquier tecla para volver al menu...";
+					Esperar Tecla;
+					menu();
+					
+				FinSi
+				
+			FinSi
+			
+		FinSi
 		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2001";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012352";
-		Escribir "Placa del camión: M 267213";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckyear = 2002 Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2002";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012347";
-		Escribir "Placa del camión: M 214446";
-		Escribir "Estado: En viaje";
-		
-		Escribir  " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY";
-		Escribir "Año de fabricación: 2001";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012399";
-		Escribir "Placa del camión: M 341725";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckyear = 2003 Entonces
-		Escribir  " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: FREIGHTLINER";
-		Escribir "Año de fabricación: 2003";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012367";
-		Escribir "Placa del camión: M 201066";
-		Escribir "Estado: En viaje";
-		
-		Escribir  " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Cabezal";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: GREAT DANE";
-		Escribir "Año de fabricación: 2003";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012405";
-		Escribir "Placa del camión: M 294642";
-		Escribir "Estado: En viaje";
-		
-		Escribir  " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY";
-		Escribir "Año de fabricación: 2003";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012393";
-		Escribir "Placa del camión: M 336521";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
 	FinSi
 	
 FinSubProceso
@@ -858,90 +999,102 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
 		menu();
-	FinSi
-	
-	Si truckbrand = "Great Dane" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: -- ";
-		Escribir "Marca del camion: GREAT DANE";
-		Escribir "Año de fabricación: 2003";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012405";
-		Escribir "Placa del camión: M 294642";
-		Escribir "Estado: En viaje";
+	SiNo
 		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: GREAT DANE, S/M CERRADO";
-		Escribir "Año de fabricación: 2000";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012374";
-		Escribir "Placa del camión: M 285801";
-		Escribir "Estado: En viaje";
+		Si truckbrand = "Great Dane" Entonces
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: -- ";
+			Escribir "Marca del camion: GREAT DANE";
+			Escribir "Año de fabricación: 2003";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012405";
+			Escribir "Placa del camión: M 294642";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: Si";
+			Escribir "Marca del camion: GREAT DANE, S/M CERRADO";
+			Escribir "Año de fabricación: 2000";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012374";
+			Escribir "Placa del camión: M 285801";
+			Escribir "Estado: En viaje";
+			
+			Escribir " ";
+			Escribir "Mostrando resultados a continuacion: ";
+			Escribir " ";
+			Escribir "Tipo de vehiculo: Contenedor";
+			Escribir "Refrigeración: Si";
+			Escribir "Marca del camion: GREAT DANE";
+			Escribir "Año de fabricación: 1999";
+			Escribir "Capacidad de carga: 23 toneladas";
+			Escribir "Código de camión: NI012381";
+			Escribir "Placa del camión: M 368808";
+			Escribir "Estado: En viaje";
+			Escribir " ";
+			Escribir "Pulse cualquier tecla para volver al menu...";
+			Esperar Tecla;
+			menu();
+		SiNo
+			
+			Si truckbrand = "Utility" Entonces
+				Escribir " ";
+				Escribir "Mostrando resultados a continuacion: ";
+				Escribir " ";
+				Escribir "Tipo de vehiculo: Contenedor";
+				Escribir "Refrigeración: Si";
+				Escribir "Marca del camion: UTILITY";
+				Escribir "Año de fabricación: 2004";
+				Escribir "Capacidad de carga: 23 toneladas";
+				Escribir "Código de camión: NI012373";
+				Escribir "Placa del camión: M 347773";
+				Escribir "Estado: En viaje";
+				
+				Escribir " ";
+				Escribir "Mostrando resultados a continuacion: ";
+				Escribir " ";
+				Escribir "Tipo de vehiculo: Contenedor";
+				Escribir "Refrigeración: Si";
+				Escribir "Marca del camion: UTILITY,MFGCO";
+				Escribir "Año de fabricación: 2009";
+				Escribir "Capacidad de carga: 23 toneladas";
+				Escribir "Código de camión: NI012375";
+				Escribir "Placa del camión: M 368231";
+				Escribir "Estado: En viaje";
+				
+				Escribir " ";
+				Escribir "Mostrando resultados a continuacion: ";
+				Escribir " ";
+				Escribir "Tipo de vehiculo: Contenedor";
+				Escribir "Refrigeración: Si";
+				Escribir "Marca del camion: UTILITY";
+				Escribir "Año de fabricación: 2006";
+				Escribir "Capacidad de carga: 23 toneladas";
+				Escribir "Código de camión: NI012377";
+				Escribir "Placa del camión: M 331351";
+				Escribir "Estado: En viaje";
+				Escribir " ";
+				Escribir "Pulse cualquier tecla para volver al menu...";
+				Esperar Tecla;
+				menu();
+			SiNo
+				
+				Escribir "No se encontró ningun resultado...";
+				Escribir " ";
+				Escribir "Pulse cualquier tecla para volver al menu...";
+				Esperar Tecla;
+				menu();
+				
+			FinSi
+			
+		FinSi
 		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: GREAT DANE";
-		Escribir "Año de fabricación: 1999";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012381";
-		Escribir "Placa del camión: M 368808";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
-	FinSi
-	
-	Si truckbrand = "Utility" Entonces
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY";
-		Escribir "Año de fabricación: 2004";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012373";
-		Escribir "Placa del camión: M 347773";
-		Escribir "Estado: En viaje";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY,MFGCO";
-		Escribir "Año de fabricación: 2009";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012375";
-		Escribir "Placa del camión: M 368231";
-		Escribir "Estado: En viaje";
-		
-		Escribir " ";
-		Escribir "Mostrando resultados a continuacion: ";
-		Escribir " ";
-		Escribir "Tipo de vehiculo: Contenedor";
-		Escribir "Refrigeración: Si";
-		Escribir "Marca del camion: UTILITY";
-		Escribir "Año de fabricación: 2006";
-		Escribir "Capacidad de carga: 23 toneladas";
-		Escribir "Código de camión: NI012377";
-		Escribir "Placa del camión: M 331351";
-		Escribir "Estado: En viaje";
-		Escribir " ";
-		Escribir "Pulse cualquier tecla para volver al menu...";
-		Esperar Tecla;
-		menu();
 	FinSi
 	
 FinSubProceso
@@ -994,6 +1147,6 @@ Proceso proyectoFinal
 	
 	accSys();
 	Limpiar Pantalla;
-	menu();
+	actionSelect();
 	
 FinProceso
