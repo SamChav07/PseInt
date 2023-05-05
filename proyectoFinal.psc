@@ -1,3 +1,88 @@
+SubProceso menu
+	
+	Limpiar Pantalla;
+	Definir enterMenu Como Entero;
+	Escribir "<<--MENU DE BUSQUEDA-->>";
+	Escribir "<<--Seleccione un filtro de busqueda-->>";
+	Escribir "1. Marca del camión.";
+	Escribir "2. Año de fabricación.";
+	Escribir "3. Refrigeración.";
+	Escribir "4. Tipo de vehículo.";
+	Escribir "5. Código de camión.";
+	Escribir "6. Placa del camión.";
+	Escribir "7. Salir...";
+	
+	Escribir "Digite una opcion: ";
+	Leer enterMenu;
+	
+	Segun enterMenu Hacer 
+		1:
+			Definir enterTruckbrand Como Caracter;;
+			Limpiar Pantalla;
+			Escribir "Ingresaste a: ";
+			Escribir "Marca del camión";
+			Escribir "Ingrese la marca del camion: ";
+			Escribir "<< Freightliner >> o << Great Dane >> o << Utility >>";
+			Leer enterTruckbrand;
+			
+			searchTruckbrand(enterTruckbrand);
+		2:
+			Definir enterTruckyear Como Entero;
+			Limpiar Pantalla;
+			Escribir "Ingresaste a: ";
+			Escribir "Año de fabricación";
+			Escribir "Ingrese el año de fabricación: ";
+			Leer enterTruckyear;
+			
+			searchTruckyear(enterTruckyear);
+		3:
+			Definir enterRefr Como Caracter;
+			Limpiar Pantalla;
+			Escribir "Ingresaste a: ";
+			Escribir "Refrigeración";
+			Escribir "Escribe si es <<Refrigerado>> o <<Seco>>";
+			Leer enterRefr;
+			
+			searchRefr(enterRefr);
+		4:
+			Definir enterVehicletype Como Caracter;;
+			Limpiar Pantalla;
+			Escribir "Ingresaste a: ";
+			Escribir "Tipo de vehículo";
+			Escribir "Escribe si es << Cabezal >> o << Contenedor >>";
+			Leer enterVehicletype;
+			
+			searchVehicletype(enterVehicletype);
+		5:
+			Definir enterTruckcode Como Caracter;
+			Limpiar Pantalla;
+			Escribir "Ingresaste a: ";
+			Escribir "Código de camión";
+			Escribir "Ingrese el código de camión";
+			Leer enterTruckcode;
+			
+			searchTruckcode(enterTruckcode);
+		6:
+			Definir enterTruckplate Como Caracter;
+			Limpiar Pantalla;
+			Escribir "Ingresaste a: ";
+			Escribir "Placa del camión";
+			Escribir "Ingrese la placa del camión";
+			Leer enterTruckplate;
+			
+			searchTruckplate(enterTruckplate);
+			
+		7:
+			
+			Escribir "Saliendo de VehicleSift...";
+			
+		De Otro Modo:
+			Escribir "Opcion Invalida. Ingrese una opcion valida...";
+	FinSegun
+	
+	
+FinSubProceso
+
 SubProceso searchTruckplate( truckPlate ) 
 	
 	Si truckPlate = "M 362446" Entonces
@@ -13,9 +98,9 @@ SubProceso searchTruckplate( truckPlate )
 		Escribir "Placa del camión: M 362446";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckPlate = "M 370158" Entonces
@@ -31,9 +116,9 @@ SubProceso searchTruckplate( truckPlate )
 		Escribir "Placa del camión: M 370158";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckPlate = "M 214446" Entonces
@@ -49,9 +134,9 @@ SubProceso searchTruckplate( truckPlate )
 		Escribir "Placa del camión: M 214446";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckPlate = "M 366862" Entonces
@@ -67,9 +152,9 @@ SubProceso searchTruckplate( truckPlate )
 		Escribir "Placa del camión: M 366862";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckPlate = "M 332754" Entonces
@@ -85,9 +170,9 @@ SubProceso searchTruckplate( truckPlate )
 		Escribir "Placa del camión: M 332754";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckPlate = "M 349230" Entonces
@@ -103,9 +188,9 @@ SubProceso searchTruckplate( truckPlate )
 		Escribir "Placa del camión: M 349230";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	
@@ -126,9 +211,9 @@ SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
 		Escribir "Placa del camión: M 362446";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckCode = "NI012346" Entonces
@@ -144,9 +229,9 @@ SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
 		Escribir "Placa del camión: M 370158";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckCode = "NI012347" Entonces
@@ -162,9 +247,9 @@ SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
 		Escribir "Placa del camión: M 214446";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckCode = "NI012348" Entonces
@@ -180,9 +265,9 @@ SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
 		Escribir "Placa del camión: M 366862";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckCode = "NI012349" Entonces
@@ -198,9 +283,9 @@ SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
 		Escribir "Placa del camión: M 332754";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckCode = "NI012350" Entonces
@@ -216,8 +301,9 @@ SubProceso searchTruckcode( truckCode ) // searchTruckcode ---------->>>>>>>>>>
 		Escribir "Placa del camión: M 349230";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
+		menu();
 	FinSi
 	
 	
@@ -293,16 +379,11 @@ SubProceso searchVehicletype ( vehicleType )
 		Escribir "Placa del camión: M 349230";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
-	SiNo
-		Escribir "No se encontró ningun resultado";
+		menu();
 	FinSi
 	
-	Si vehicleType = "Refrigerado" Entonces
-		
-	FinSi
 	
 FinSubProceso
 
@@ -376,11 +457,9 @@ SubProceso searchRefr ( refr )
 		Escribir "Código de camión: NI012377";
 		Escribir "Placa del camión: M 331351";
 		Escribir "Estado: En viaje";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
-	SiNo
-		Escribir "No se encontró ningun resultado";
+		menu();
 	FinSi
 	
 FinSubProceso
@@ -422,9 +501,9 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Placa del camión: M 285801";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckyear = 2001 Entonces//Muestra algunos de los posibles resultados si el año de fabricación fuera 2001, se muestra una lista de datos correspondientes a cada vehículo
@@ -462,9 +541,9 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Placa del camión: M 267213";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckyear = 2002 Entonces
@@ -491,9 +570,9 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Placa del camión: M 341725";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckyear = 2003 Entonces
@@ -531,9 +610,9 @@ SubProceso searchTruckyear ( truckyear Por Referencia)
 		Escribir "Placa del camión: M 336521";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 FinSubProceso
@@ -576,9 +655,9 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Placa del camión: M 349230";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckbrand = "Great Dane" Entonces
@@ -616,9 +695,9 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Placa del camión: M 368808";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 	Si truckbrand = "Utility" Entonces
@@ -656,9 +735,9 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Placa del camión: M 331351";
 		Escribir "Estado: En viaje";
 		Escribir " ";
-		Escribir "Pulse cualquier tecla para salir...";
+		Escribir "Pulse cualquier tecla para volver al menu...";
 		Esperar Tecla;
-		
+		menu();
 	FinSi
 	
 FinSubProceso
@@ -711,80 +790,7 @@ Proceso proyectoFinal
 	
 	accSys();
 	Limpiar Pantalla;
-	Definir menu Como Entero;
-	Escribir "<<--MENU DE BUSQUEDA-->>";
-	Escribir "<<--Seleccione un filtro de busqueda-->>";
-	Escribir "1. Marca del camión.";
-	Escribir "2. Año de fabricación.";
-	Escribir "3. Refrigeración.";
-	Escribir "4. Tipo de vehículo.";
-	Escribir "5. Código de camión.";
-	Escribir "6. Placa del camión.";
-	Escribir "7. Salir...";
-	
-	Escribir "Digite una opcion: ";
-	Leer menu;
-	
-	Segun menu Hacer 
-		1:
-			Definir enterTruckbrand Como Caracter;;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Marca del camión";
-			Escribir "Ingrese la marca del camion: ";
-			Escribir "<< Freightliner >> o << Great Dane >> o << Utility >>";
-			Leer enterTruckbrand;
-			
-			searchTruckbrand(enterTruckbrand);
-		2:
-			Definir enterTruckyear Como Entero;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Año de fabricación";
-			Escribir "Ingrese el año de fabricación: ";
-			Leer enterTruckyear;
-			
-			searchTruckyear(enterTruckyear);
-		3:
-			Definir enterRefr Como Caracter;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Refrigeración";
-			Escribir "Escribe si es <<Refrigerado>> o <<Seco>>";
-			Leer enterRefr;
-			
-			searchRefr(enterRefr);
-		4:
-			Definir enterVehicletype Como Caracter;;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Tipo de vehículo";
-			Escribir "Escribe si es << Cabezal >> o << Contenedor >>";
-			Leer enterVehicletype;
-			
-			searchVehicletype(enterVehicletype);
-		5:
-			Definir enterTruckcode Como Caracter;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Código de camión";
-			Escribir "Ingrese el código de camión";
-			Leer enterTruckcode;
-			
-			searchTruckcode(enterTruckcode);
-		6:
-			Definir enterTruckplate Como Caracter;
-			Limpiar Pantalla;
-			Escribir "Ingresaste a: ";
-			Escribir "Placa del camión";
-			Escribir "Ingrese la placa del camión";
-			Leer enterTruckplate;
-			
-			searchTruckplate(enterTruckplate);
-			
-		De Otro Modo:
-			Escribir "Opcion Invalida. Ingrese una opcion valida...";
-	FinSegun
+	menu();
 	
 	
 FinProceso
