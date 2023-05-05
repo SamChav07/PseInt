@@ -685,6 +685,7 @@ SubProceso  searchTruckbrand (truckbrand Por Referencia)//Funcion para buscar po
 		Escribir "Pulse cualquier tecla para salir...";
 		Esperar Tecla;
 		
+		
 	FinSi
 	
 	Si truckbrand = "Great Dane" Entonces
@@ -831,7 +832,7 @@ Proceso proyectoFinal
 	Escribir "5. Código de camión.";
 	Escribir "6. Placa del camión.";
 	Escribir "7. Conductores.";
-	Escribir "8. Salir...";
+	Escribir "8. Cerrar Sesion...";
 	
 	Escribir "Digite una opcion: ";
 	Leer menu;
@@ -901,6 +902,13 @@ Proceso proyectoFinal
 			Leer enterDriver;
 			
 			searchDriver(enterDriver);
+		8:
+			Escribir " ";
+			Escribir "*** Cerrando Sesion ***";
+			Escribir " ";
+			accSys();
+			Limpiar Pantalla;
+			
 		De Otro Modo:
 			Escribir "*** Opcion Invalida. Ingrese una opcion valida ***";
 	FinSegun
